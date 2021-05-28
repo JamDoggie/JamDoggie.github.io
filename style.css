@@ -1,0 +1,252 @@
+html {
+	font-family: Gill Sans, sans-serif;
+	overflow: hidden;
+	scrollbar-color: #555 #333;
+	background: #2b2e36;
+	
+}
+
+.body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	
+	margin:0px;
+	padding: 0;
+}
+
+.nav_wrapper {
+	position: fixed;
+	
+	width: 100%;
+	background-color: rgba(230, 230, 230, 0.1);
+	height: 3.5em;
+	z-index: 5;
+	top: 0;
+	left: 0%;
+	margin: 0;
+	transition-property: background box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.navigation_div {
+	position: absolute;
+	display: flex;
+
+	height: 100%;
+	
+	left: 50%;
+	
+	transform: translate(-50%, 0);
+}
+
+
+.navigation_div button {
+	position: relative;
+	height: 100%;
+	font-family: Gill Sans, sans-serif;
+	padding: 3.5%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	font-weight: 600;
+	color: rgb(190, 190, 190);
+	cursor: pointer;
+	transition-property: background font-color top;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+	--background-height: 0%;
+
+	width: 8em;
+	
+	/* I don't know why but this fixes an issue where the github nav button gets offset downwards. */
+	padding-bottom: 0;
+	padding-top: 0;
+	
+	white-space: nowrap;
+	top: 0;
+}
+
+.navigation_div button svg {
+
+}
+
+.navigation_div button text {
+
+}
+
+.navigation_div button:after {
+	transition-property: height;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+	
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: rgba(200,200,200, 0.1);
+	--background-height: inherit;
+	width: 100%;
+	height: var(--background-height);
+	
+	transform: translate(0, -100%);
+}
+
+.navigation_div button:hover {
+	--background-height: 100%;
+	height: 115%;
+	top: -15%;
+}
+
+.navigation_div button text {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	transform: translate(0%, -50%);
+}
+
+
+
+
+.navigation_div button:active {
+	--background-height: 100%;
+	background-color: rgba(150,150,150, 0.5);
+	height: 115%;
+	top: -15%;
+}
+
+.nav_icon_list {
+	position: absolute;
+	left: 50%;
+	top: 4em;
+	transform: translate(-50%, 0%);
+}
+
+.nav_icon_list button {
+	display: inline;
+	position: relative;
+	border:none;
+	outline:none;
+	background-color: transparent;
+	margin: 0 0.5em;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 2.1em;
+	height: 2.1em;
+	top: 0;
+	opacity: 0.4;
+	filter: grayscale(100%);
+	
+	transition-property: transform filter opacity;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+	
+	cursor: pointer;
+}
+
+.nav_icon_list button:hover {
+	transform: scale(1.1);
+	filter: grayscale(50%);
+	opacity: 1;
+}
+
+.nav_icon_list button:active {
+	filter: grayscale(100%);
+	transform: scale(1.0);
+}
+
+.steam_img {
+	background-image: url('steam_img.svg');
+}
+
+.youtube_img {
+	background-image: url('yt_icon_rgb.png');
+}
+
+button a {
+	color: rgb(200, 200, 200);
+	text-decoration: none;
+	padding: 1.25em 0;
+	margin: -3.5em 0;
+}
+
+
+.header_div {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.header_bg {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+	height: 100vh;
+	z-index: -1;
+	
+	filter: blur(0.75em);
+}
+
+.header_img {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	margin: 100px;
+	border-radius: 50%;
+	filter: drop-shadow(0px 0px 0.5em rgba(0, 0, 0, 0.25));
+}
+
+.header_text {
+	position: absolute;
+	font-family: "Segoe UI";
+	color: white;
+	left: 40%;
+	top: 13rem;
+	font-size: 4rem;
+	font-weight: 700;
+	
+	margin: 0px;
+	
+	transform: translate(0, -50%);
+}
+
+.header_large {
+	font-size: 7em;
+	font-style: italic;
+}
+
+.header_text_aka {
+	position: absolute;
+	font-family: "Segoe UI";
+	color: white;
+	left: 40%;
+	top: 18rem;
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: italic;
+	
+	transform: translate(0, -50%);
+}
+
+.bio_text {
+	position: absolute;
+	font-family: "Segoe UI";
+	color: white;
+	left: 30rem;
+	top: 26rem;
+	font-size: 3rem;
+	font-weight: 700;
+	
+	text-shadow: 2px 2px 1em rgba(0, 0, 0, 0.5);
+	
+	transform: translate(0, -50%);
+}
