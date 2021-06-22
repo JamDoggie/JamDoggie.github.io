@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="occlusionstyle.css" />
+	</head>
+	
+	<body>
+			<div class="nav_wrapper" id="nav_wrapper_id">
+				<div class="navigation_div" id="navigation_id">
+					<button onclick="redirectToHome();">Home</button>
+					<button onclick="redirectToOcclusion();">Occlusion</button>
+				</div>
+			</div>
+	
+		<div class="header_div">
+			<img class="occheader" src="occlusion.png"></img>
+			<text class="header_text header_large">Occlusion Voice Chat</text>
+			
+			<p class="bio_text">A directional VoIP program for Minecraft</p>
+			
+			<img class="header_bg" src="occlusion_screenshot.png"></img>
+		</div>
+	
+		<div class="body-div">
+			<text class="user-guide-text">User Guide</text>
+			<iframe class="user-guide-video" width="560" height="315" src="https://www.youtube.com/embed/sxGUJaQPYos" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+			<text class="downloads-text">Beta Downloads</text>
+			<a class="download-link" href="occlusion_downloads/client/occlusion-voice-chat-installer-x64.exe">Occlusion Client x64 Windows Installer</a>
+			<a class="download-link" href="occlusion_downloads/client/Occlusion Voice Chat.pkg">Occlusion Client x64 Mac OSX 10.13+ Installer</a>
+			<a class="download-link" href="occlusion_downloads/client/Occlusion Voice Chat.pkg">Occlusion Client x64 Linux Binaries (Debian)</a>
+			<text class="downloads-text server-text">Beta Server Binaries</text>
+			<a class="download-link" href="occlusion_downloads/server/linux64/OcclusionDedicatedServer.tar.xz">Occlusion Server x64 Linux Binaries (Portable)</a>
+			<a class="download-link" href="occlusion_downloads/server/win64/OcclusionDedicatedServer.exe">Occlusion Server x64 Windows Binaries</a>
+		</div>
+		
+		<script>
+			var navWrapper = document.getElementById("nav_wrapper_id");
+			var navigation = document.getElementById("navigation_id");
+			
+			window.addEventListener('scroll', function(e)
+			{ 
+				updateScrolledElements();
+			}, true)
+			
+			function getScrollPercent() {
+				var h = document.documentElement, 
+					b = document.body,
+					st = 'scrollTop',
+					sh = 'scrollHeight';
+				return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+			}
+			
+			function updateScrolledElements()
+			{
+				var scroll = getScrollPercent() / 100;
+
+				if (scroll == 0)
+				{
+					navWrapper.style.setProperty("background-color", "rgba(230, 230, 230, 0.1)");
+					
+					
+					navWrapper.style.setProperty("box-shadow", "-0.1em 0em 2.5em 0.2em rgba(0,0,0,0)");
+				}
+				else
+				{
+					navWrapper.style.setProperty("background-color", "rgba(100, 100, 100, 0.8)");
+					
+					
+					navWrapper.style.setProperty("box-shadow", "-0.1em -0.6em 2em 0.2em rgba(0,0,0,0.4)");
+				}
+			}
+			
+			function redirectToOcclusion()
+			{
+				window.location.href="occlusion.html";
+			}
+			
+			function redirectToHome()
+			{
+				window.location.href="index.html";
+			}
+		</script>
+	</body>
+</html>

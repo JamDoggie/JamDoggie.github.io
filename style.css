@@ -1,15 +1,16 @@
 html {
 	font-family: Gill Sans, sans-serif;
-	overflow: hidden;
 	scrollbar-color: #555 #333;
 	background: #2b2e36;
 	
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .body {
 	overflow-x: hidden;
-	overflow-y: hidden;
-	
+	overflow-y: auto;
+	width: 100vw;
 	margin:0px;
 	padding: 0;
 }
@@ -44,13 +45,13 @@ html {
 .navigation_div button {
 	position: relative;
 	height: 100%;
-	font-family: Gill Sans, sans-serif;
+	font-family: "Segoe UI";
 	padding: 3.5%;
 	background: transparent;
 	border: none;
 	outline: none;
-	font-size: 1rem;
-	font-weight: 600;
+	font-size: 1.2rem;
+	font-weight: 400;
 	color: rgb(190, 190, 190);
 	cursor: pointer;
 	transition-property: background font-color top;
@@ -58,7 +59,7 @@ html {
     transition-timing-function: ease;
 	--background-height: 0%;
 
-	width: 8em;
+	width: 7em;
 	
 	/* I don't know why but this fixes an issue where the github nav button gets offset downwards. */
 	padding-bottom: 0;
@@ -179,17 +180,16 @@ button a {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 80vh;
+	height: 50em;
 }
 
 .header_bg {
 	position: absolute;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	left: 0;
 	top: 0;
 	object-fit: cover;
-	height: 100vh;
 	z-index: -1;
 	
 	filter: blur(0.75em);
@@ -209,18 +209,19 @@ button a {
 	position: absolute;
 	font-family: "Segoe UI";
 	color: white;
-	left: 40%;
+	left: 40rem;
 	top: 13rem;
 	font-size: 4rem;
 	font-weight: 700;
 	
 	margin: 0px;
-	
+	white-space: nowrap;
 	transform: translate(0, -50%);
 }
 
 .header_large {
-	font-size: 7em;
+	left: max(30%, 33rem);
+	font-size: 5vw;
 	font-style: italic;
 }
 
@@ -228,7 +229,7 @@ button a {
 	position: absolute;
 	font-family: "Segoe UI";
 	color: white;
-	left: 40%;
+	left: 40rem;
 	top: 18rem;
 	font-size: 2rem;
 	font-weight: 700;
@@ -249,4 +250,89 @@ button a {
 	text-shadow: 2px 2px 1em rgba(0, 0, 0, 0.5);
 	
 	transform: translate(0, -50%);
+}
+
+.projects-header {
+	position: absolute;
+	
+	font-family: Gill Sans, sans-serif;
+	color: rgb(200,200,200);
+	font-size: 3rem;
+	font-weight: 600;
+	text-align: center;
+	top: 53rem;
+	left: 50%;
+	
+	transform: translate(-50%, 0);
+}
+
+.occlusion-project {
+	position: absolute;
+	height: 30rem;
+	width: 100%;
+	top: 60rem;
+}
+
+.occlusion-project-icon {
+	position: absolute;
+	width: 40em;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.occlusion-title {
+	position: absolute;
+	
+	font-family: Gill Sans, sans-serif;
+	color: rgb(200,200,200);
+	font-size: 2rem;
+	font-weight: 400;
+	
+	top: 6rem;
+	left: max(22em, 50%);
+	white-space: nowrap;
+	transform: translate(-50%, 0);
+}
+
+.occlusion-paragraph {
+	position: absolute;
+	
+	font-family: Gill Sans, sans-serif;
+	color: rgb(200,200,200);
+	font-size: 1.25rem;
+	font-weight: 400;
+	
+	top: 8rem;
+	left: max(40em, 50%);
+	
+	width: 30em;
+
+	transform: translate(-50%, 0);
+}
+
+.occlusion-button {
+	position: absolute;
+	background-color: #9773ce;
+	border: none;
+	outline: none;
+	left: max(76%, 55em);
+	width: 10rem;
+	height: 3rem;
+	color: rgb(200,200,200);
+	font-size: 1.25rem;
+	border-radius: 0.5rem;
+	top: 12rem;
+	cursor: pointer;
+	
+	transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.occlusion-button:hover {
+	background-color: #8968bd;
+}
+
+.occlusion-button:active {
+	background-color: #8162b3;
 }
