@@ -27,6 +27,7 @@ html {
 	transition-property: background box-shadow;
     transition-duration: 0.5s;
     transition-timing-function: ease;
+	backdrop-filter: blur(5px);
 }
 
 .navigation_div {
