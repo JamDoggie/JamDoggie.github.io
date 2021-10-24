@@ -20,6 +20,9 @@
 	
 	
 }
+.nav_wrapper {
+	backdrop-filter: blur(0px);
+}
 
 .body-div {
 	position: relative;
@@ -43,6 +46,18 @@
 	
 }
 
+.header_bg {
+
+	filter: blur(0em);
+}
+
+.header_text {
+	text-shadow: 2px 2px 0.2em rgba(0, 0, 0, 0.4);
+}
+
+.bio_text {
+	text-shadow: 2px 2px 0.5em rgba(0, 0, 0, 0.5);
+}
 
 .user-guide-video {
 	display: block;

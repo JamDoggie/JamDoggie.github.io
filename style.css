@@ -137,9 +137,8 @@ html {
 	width: 2.1em;
 	height: 2.1em;
 	top: 0;
-	opacity: 0.4;
-	filter: grayscale(100%);
-	
+	opacity: 0.5;
+
 	transition-property: transform filter opacity;
     transition-duration: 0.1s;
     transition-timing-function: ease;
@@ -149,21 +148,23 @@ html {
 
 .nav_icon_list button:hover {
 	transform: scale(1.1);
-	filter: grayscale(50%);
 	opacity: 1;
 }
 
 .nav_icon_list button:active {
-	filter: grayscale(100%);
 	transform: scale(1.0);
 }
 
-.steam_img {
-	background-image: url('steam_img.svg');
+.twitter_img {
+	background-image: url('twitter.svg');
+}
+
+.github_img {
+	background-image: url('github.svg');
 }
 
 .youtube_img {
-	background-image: url('yt_icon_rgb.png');
+	background-image: url('yt_icon_rgb.png')
 }
 
 button a {
